@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp34.Models
 {
-    class CarType
-    {
-        public int Id { get; set; }
-        public string CarName { get; set; }
-        public float Coificent {  get; set; }
-    }
+	class CarType(int id, string carName, float coificent)
+	{
+		public int Id => id;
+		public string CarName => carName;
+		public float Coificent => coificent;
+
+
+		public CarType() : this(1, "", 4.1f)
+		{
+
+		}
+	}
 }
